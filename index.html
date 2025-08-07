@@ -71,6 +71,8 @@
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 20px;
+            /* Важно для работы колонок */
+            break-inside: avoid; 
         }
         
         .menu-item:last-child {
@@ -89,10 +91,19 @@
             line-height: 1.4;
         }
 
+        /* СТИЛЬ ДЛЯ ОПИСАНИЯ ПОД НАЗВАНИЕМ */
+        .item-description {
+            font-size: 0.85em;
+            font-style: italic;
+            color: #777777;
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+
         .item-weight {
             font-size: 0.9em;
             color: #777777;
-            margin-top: 4px;
+            margin-top: 5px;
         }
 
         .item-price {
@@ -107,6 +118,18 @@
         .full-width {
             grid-column: 1 / -1;
         }
+
+        .multi-column-list {
+            column-count: 1;
+        }
+        
+        @media (min-width: 768px) {
+            .multi-column-list {
+                column-count: 2;
+                column-gap: 60px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -118,6 +141,157 @@
 
         <main class="menu-grid">
             
+            <section class="menu-category full-width">
+                <h2>Авторские чаи</h2>
+                <div class="multi-column-list">
+                    <div class="menu-item">
+                        <div class="item-content">
+                            <div class="item-name">Марокканский</div>
+                            <div class="item-description">ассам, мята, сахар, корица, анис, лайм, апельсин, лимон</div>
+                            <div class="item-weight">600 мл</div>
+                        </div>
+                        <div class="item-price">550 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content">
+                            <div class="item-name">Облепиха с апельсином</div>
+                            <div class="item-description">ассам, сахар, ягоды облепихи, апельсин</div>
+                            <div class="item-weight">600 мл</div>
+                        </div>
+                        <div class="item-price">550 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content">
+                            <div class="item-name">Облепиха с медом</div>
+                            <div class="item-description">ассам, сахар, ягоды облепихи, мед</div>
+                            <div class="item-weight">600 мл</div>
+                        </div>
+                        <div class="item-price">550 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content">
+                            <div class="item-name">Клюква с медом</div>
+                            <div class="item-description">ассам, клюква, сахар, мед</div>
+                            <div class="item-weight">600 мл</div>
+                        </div>
+                        <div class="item-price">550 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content">
+                            <div class="item-name">Малиновый с имбирем</div>
+                            <div class="item-description">ассам, малина, имбирь, сахар</div>
+                            <div class="item-weight">600 мл</div>
+                        </div>
+                        <div class="item-price">580 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content">
+                            <div class="item-name">Ягодный</div>
+                            <div class="item-description">ассам, малина, смородина, ежевика, клубника, сахар</div>
+                            <div class="item-weight">600 мл</div>
+                        </div>
+                        <div class="item-price">580 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content">
+                            <div class="item-name">Согревающий</div>
+                            <div class="item-description">ассам, имбирь, апельсин, яблоко, лайм, мед, сахар</div>
+                            <div class="item-weight">600 мл</div>
+                        </div>
+                        <div class="item-price">580 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content">
+                            <div class="item-name">Шиповник по старому рецепту</div>
+                            <div class="item-description">ассам, шиповник, мед, сахар</div>
+                            <div class="item-weight">600 мл</div>
+                        </div>
+                        <div class="item-price">550 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content">
+                            <div class="item-name">Тропический</div>
+                            <div class="item-description">наглый фрукт, мята, лайм, апельсин, сахар</div>
+                            <div class="item-weight">600 мл</div>
+                        </div>
+                        <div class="item-price">550 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content">
+                            <div class="item-name">Облепиха с грушей</div>
+                            <div class="item-description">ассам, сахар, ягоды облепихи, груша</div>
+                            <div class="item-weight">600 мл</div>
+                        </div>
+                        <div class="item-price">550 р.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="menu-category full-width">
+                <h2>Чай</h2>
+                <div class="multi-column-list">
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Сенча классический зеленый чай</div><div class="item-weight">600 мл</div></div>
+                        <div class="item-price">320 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Китайский жасмин</div><div class="item-weight">600 мл</div></div>
+                        <div class="item-price">320 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Молочный Улун зеленый чай</div><div class="item-weight">500 мл</div></div>
+                        <div class="item-price">320 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Ассам классический черный индийский чай</div><div class="item-weight">600 мл</div></div>
+                        <div class="item-price">320 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Эрл Грей ароматный черный с бергамотом</div><div class="item-weight">600 мл</div></div>
+                        <div class="item-price">320 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Черный с чабрецом</div><div class="item-weight">600 мл</div></div>
+                        <div class="item-price">320 р.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h2>Горячие напитки</h2>
+                 <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Эспрессо</div><div class="item-weight">90 мл</div></div>
+                    <div class="item-price">180 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Американо</div><div class="item-weight">160 мл</div></div>
+                    <div class="item-price">180 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Капучино</div><div class="item-weight">180 мл</div></div>
+                    <div class="item-price">260 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Латте</div><div class="item-weight">200 мл</div></div>
+                    <div class="item-price">300 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Моккачино</div><div class="item-weight">200 мл</div></div>
+                    <div class="item-price">350 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Сироп</div><div class="item-weight">10 мл</div></div>
+                    <div class="item-price">50 р.</div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h2>Добавки к чаю</h2>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Мята, лимон, мед</div></div>
+                    <div class="item-price">80 р.</div>
+                </div>
+            </section>
             <section class="menu-category">
                 <h2>Водка</h2>
                 <div class="menu-item">
@@ -248,41 +422,43 @@
 
             <section class="menu-category full-width">
                 <h2>Алкогольные коктейли</h2>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Голубая Лагуна</div><div class="item-weight">300 мл</div></div>
-                    <div class="item-price">400 р.</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Текила Санрайз</div><div class="item-weight">300 мл</div></div>
-                    <div class="item-price">450 р.</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Би Блэк</div><div class="item-weight">200 мл</div></div>
-                    <div class="item-price">450 р.</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Куба Либре</div><div class="item-weight">200 мл</div></div>
-                    <div class="item-price">450 р.</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Маргарита</div><div class="item-weight">150 мл</div></div>
-                    <div class="item-price">500 р.</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Мохито</div><div class="item-weight">300 мл</div></div>
-                    <div class="item-price">500 р.</div>
-                </div>
-                 <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Пина Колада</div><div class="item-weight">300 мл</div></div>
-                    <div class="item-price">450 р.</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Лонг Айленд</div><div class="item-weight">300 мл</div></div>
-                    <div class="item-price">500 р.</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Апероль Шприц</div><div class="item-weight">250 мл</div></div>
-                    <div class="item-price">500 р.</div>
+                <div class="multi-column-list">
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Голубая Лагуна</div><div class="item-weight">300 мл</div></div>
+                        <div class="item-price">400 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Текила Санрайз</div><div class="item-weight">300 мл</div></div>
+                        <div class="item-price">450 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Би Блэк</div><div class="item-weight">200 мл</div></div>
+                        <div class="item-price">450 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Куба Либре</div><div class="item-weight">200 мл</div></div>
+                        <div class="item-price">450 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Маргарита</div><div class="item-weight">150 мл</div></div>
+                        <div class="item-price">500 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Мохито</div><div class="item-weight">300 мл</div></div>
+                        <div class="item-price">500 р.</div>
+                    </div>
+                     <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Пина Колада</div><div class="item-weight">300 мл</div></div>
+                        <div class="item-price">450 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Лонг Айленд</div><div class="item-weight">300 мл</div></div>
+                        <div class="item-price">500 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Апероль Шприц</div><div class="item-weight">250 мл</div></div>
+                        <div class="item-price">500 р.</div>
+                    </div>
                 </div>
             </section>
             
@@ -388,61 +564,65 @@
 
             <section class="menu-category full-width">
                 <h2>Домашние лимонады</h2>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Ягодный</div><div class="item-weight">330 мл</div></div>
-                    <div class="item-price">350 р.</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Лимонный с мятой</div><div class="item-weight">330 мл</div></div>
-                    <div class="item-price">360 р.</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Имбирный с огурцом</div><div class="item-weight">330 мл</div></div>
-                    <div class="item-price">370 р.</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Вишневый</div><div class="item-weight">330 мл</div></div>
-                    <div class="item-price">360 р.</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Яблочный с мятой</div><div class="item-weight">330 мл</div></div>
-                    <div class="item-price">350 р.</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Манговый с базиликом</div><div class="item-weight">330 мл</div></div>
-                    <div class="item-price">380 р.</div>
+                <div class="multi-column-list">
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Ягодный</div><div class="item-weight">330 мл</div></div>
+                        <div class="item-price">350 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Лимонный с мятой</div><div class="item-weight">330 мл</div></div>
+                        <div class="item-price">360 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Имбирный с огурцом</div><div class="item-weight">330 мл</div></div>
+                        <div class="item-price">370 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Вишневый</div><div class="item-weight">330 мл</div></div>
+                        <div class="item-price">360 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Яблочный с мятой</div><div class="item-weight">330 мл</div></div>
+                        <div class="item-price">350 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Манговый с базиликом</div><div class="item-weight">330 мл</div></div>
+                        <div class="item-price">380 р.</div>
+                    </div>
                 </div>
             </section>
 
             <section class="menu-category full-width">
                 <h2>Напитки</h2>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Морс в ассортименте</div><div class="item-weight">250 мл</div></div>
-                    <div class="item-price">250 р.</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Лимонад "Добрый" в ассортименте</div><div class="item-weight">500 мл</div></div>
-                    <div class="item-price">200 р.</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Сок в ассортименте</div><div class="item-weight">200 мл</div></div>
-                    <div class="item-price">150 р.</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Бонаква</div><div class="item-weight">500 мл</div></div>
-                    <div class="item-price">150 р.</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Боржоми</div><div class="item-weight">500 мл</div></div>
-                    <div class="item-price">300 р.</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Квас разливной</div><div class="item-weight">500 мл</div></div>
-                    <div class="item-price">150 р.</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content"><div class="item-name">Молочный коктейль (клубничный, шоколадный, ванильный)</div><div class="item-weight">300 мл</div></div>
-                    <div class="item-price">350 р.</div>
+                <div class="multi-column-list">
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Морс в ассортименте</div><div class="item-weight">250 мл</div></div>
+                        <div class="item-price">250 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Лимонад "Добрый" в ассортименте</div><div class="item-weight">500 мл</div></div>
+                        <div class="item-price">200 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Сок в ассортименте</div><div class="item-weight">200 мл</div></div>
+                        <div class="item-price">150 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Бонаква</div><div class="item-weight">500 мл</div></div>
+                        <div class="item-price">150 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Боржоми</div><div class="item-weight">500 мл</div></div>
+                        <div class="item-price">300 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Квас разливной</div><div class="item-weight">500 мл</div></div>
+                        <div class="item-price">150 р.</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-content"><div class="item-name">Молочный коктейль (клубничный, шоколадный, ванильный)</div><div class="item-weight">300 мл</div></div>
+                        <div class="item-price">350 р.</div>
+                    </div>
                 </div>
             </section>
             
