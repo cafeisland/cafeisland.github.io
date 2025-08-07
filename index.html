@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню Ресторана</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f9f9f9;
+            margin: 0;
+            font-family: 'Source Sans 3', sans-serif;
+            color: #333333;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .menu-wrapper {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px 40px;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+        }
+
+        .menu-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .menu-header h1 {
+            font-family: 'Lora', serif;
+            font-size: 3em;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px 60px;
+        }
+
+        /* Адаптивный макет для десктопов */
+        @media (min-width: 992px) {
+            .menu-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .menu-category {
+            break-inside: avoid;
+        }
+
+        .menu-category h2 {
+            font-family: 'Lora', serif;
+            font-size: 2.2em;
+            font-weight: 400;
+            color: #1a1a1a;
+            margin-top: 0;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #d9d9d9;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .menu-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-content {
+            flex-grow: 1;
+            padding-right: 15px;
+        }
+
+        .item-name {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #2b2b2b;
+            line-height: 1.4;
+        }
+
+        .item-weight {
+            font-size: 0.9em;
+            color: #777777;
+            margin-top: 4px;
+        }
+
+        .item-price {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333333;
+            white-space: nowrap;
+            padding-left: 15px;
+            line-height: 1.4;
+        }
+        
+        .full-width {
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-wrapper">
+        <header class="menu-header">
+            <h1>Меню</h1>
+        </header>
+
+        <main class="menu-grid">
+            
+            <section class="menu-category">
+                <h2>Водка</h2>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Белуга</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">300 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Архангельская</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">120 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Русский Стандарт</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">150 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Царская Оригинальная</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">150 р.</div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h2>Виски</h2>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Фокс энд Догс</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">200 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Грандс</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">350 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Таллмор Дью</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">300 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Баллантайнс</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">350 р.</div>
+                </div>
+            </section>
+            
+            <section class="menu-category">
+                <h2>Коньяк</h2>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Армянский 3*</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">200 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Старейшина 3*</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">200 р.</div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h2>Ром</h2>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Девилс</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">250 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Барсело</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">250 р.</div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h2>Текила и Джин</h2>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Золотая</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">300 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Серебряная</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">300 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Барристер</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">250 р.</div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h2>Домашние настойки</h2>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Вишня</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">200 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Клюква</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">200 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Облепиха</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">200 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Малина</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">200 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Смородина</div><div class="item-weight">50 мл</div></div>
+                    <div class="item-price">200 р.</div>
+                </div>
+            </section>
+            
+            <section class="menu-category">
+                <h2>Шоты</h2>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Россия</div><div class="item-weight">4 шт по 50 мл</div></div>
+                    <div class="item-price">600 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Ураган</div><div class="item-weight">4 шт по 50 мл</div></div>
+                    <div class="item-price">600 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Боярский</div><div class="item-weight">4 шт по 50 мл</div></div>
+                    <div class="item-price">600 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Собака.ру</div><div class="item-weight">4 шт по 50 мл</div></div>
+                    <div class="item-price">600 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Б-52</div><div class="item-weight">1 шт&nbsp;&nbsp;&nbsp;&nbsp;50 мл</div></div>
+                    <div class="item-price">400 р.</div>
+                </div>
+            </section>
+
+            <section class="menu-category full-width">
+                <h2>Алкогольные коктейли</h2>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Голубая Лагуна</div><div class="item-weight">300 мл</div></div>
+                    <div class="item-price">400 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Текила Санрайз</div><div class="item-weight">300 мл</div></div>
+                    <div class="item-price">450 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Би Блэк</div><div class="item-weight">200 мл</div></div>
+                    <div class="item-price">450 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Куба Либре</div><div class="item-weight">200 мл</div></div>
+                    <div class="item-price">450 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Маргарита</div><div class="item-weight">150 мл</div></div>
+                    <div class="item-price">500 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Мохито</div><div class="item-weight">300 мл</div></div>
+                    <div class="item-price">500 р.</div>
+                </div>
+                 <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Пина Колада</div><div class="item-weight">300 мл</div></div>
+                    <div class="item-price">450 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Лонг Айленд</div><div class="item-weight">300 мл</div></div>
+                    <div class="item-price">500 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Апероль Шприц</div><div class="item-weight">250 мл</div></div>
+                    <div class="item-price">500 р.</div>
+                </div>
+            </section>
+            
+            <section class="menu-category">
+                <h2>Домашнее вино</h2>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Белое, сухое</div><div class="item-weight">200 мл</div></div>
+                    <div class="item-price">240 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Красное, сухое</div><div class="item-weight">200 мл</div></div>
+                    <div class="item-price">240 р.</div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h2>Вина по бокалам</h2>
+                 <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Италия, Крым, Чили</div><div class="item-weight">150 мл</div></div>
+                    <div class="item-price">300 р.</div>
+                </div>
+            </section>
+            
+            <section class="menu-category full-width">
+                <h2>Вина в бутылках</h2>
+                <div class="menu-grid">
+                    <div>
+                        <div class="menu-item"><div class="item-content"><div class="item-name" style="color: #8B0000; font-style: italic;">Красные</div></div></div>
+                        <div class="menu-item">
+                            <div class="item-content"><div class="item-name">Кьянти, сухое, Италия</div><div class="item-weight">750 мл</div></div>
+                            <div class="item-price">3000 р.</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-content"><div class="item-name">Хванчкара, п/с, Грузия</div><div class="item-weight">750 мл</div></div>
+                            <div class="item-price">3000 р.</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-content"><div class="item-name">Киндзмараули, п/с, Грузия</div><div class="item-weight">750 мл</div></div>
+                            <div class="item-price">3000 р.</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="menu-item"><div class="item-content"><div class="item-name" style="color: #4682B4; font-style: italic;">Белые</div></div></div>
+                        <div class="menu-item">
+                            <div class="item-content"><div class="item-name">Пино Гриджио, сухое, Сицилия</div><div class="item-weight">750 мл</div></div>
+                            <div class="item-price">3000 р.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="menu-category full-width">
+                <h2>Игристые Вина</h2>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Монтельвини Просекко Тревизо, Италия</div><div class="item-weight">750 мл</div></div>
+                    <div class="item-price">3000 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Лев Голицын</div><div class="item-weight">750 мл</div></div>
+                    <div class="item-price">1000 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Лаветти, Россия</div><div class="item-weight">750 мл</div></div>
+                    <div class="item-price">800 р.</div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h2>Пиво разливное</h2>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Выборгское фильтрованное</div><div class="item-weight">500 мл</div></div>
+                    <div class="item-price">350 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Выборгское нефильтрованное</div><div class="item-weight">500 мл</div></div>
+                    <div class="item-price">250 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Выборгское темное</div><div class="item-weight">500 мл</div></div>
+                    <div class="item-price">300 р.</div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h2>Пиво в бутылках</h2>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Крушовице</div><div class="item-weight">450 мл</div></div>
+                    <div class="item-price">200 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Грин Бит</div><div class="item-weight">480 мл</div></div>
+                    <div class="item-price">200 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Голд Бир</div><div class="item-weight">450 мл</div></div>
+                    <div class="item-price">200 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Балтика 0</div><div class="item-weight">450 мл</div></div>
+                    <div class="item-price">150 р.</div>
+                </div>
+            </section>
+
+            <section class="menu-category full-width">
+                <h2>Домашние лимонады</h2>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Ягодный</div><div class="item-weight">330 мл</div></div>
+                    <div class="item-price">350 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Лимонный с мятой</div><div class="item-weight">330 мл</div></div>
+                    <div class="item-price">360 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Имбирный с огурцом</div><div class="item-weight">330 мл</div></div>
+                    <div class="item-price">370 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Вишневый</div><div class="item-weight">330 мл</div></div>
+                    <div class="item-price">360 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Яблочный с мятой</div><div class="item-weight">330 мл</div></div>
+                    <div class="item-price">350 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Манговый с базиликом</div><div class="item-weight">330 мл</div></div>
+                    <div class="item-price">380 р.</div>
+                </div>
+            </section>
+
+            <section class="menu-category full-width">
+                <h2>Напитки</h2>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Морс в ассортименте</div><div class="item-weight">250 мл</div></div>
+                    <div class="item-price">250 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Лимонад "Добрый" в ассортименте</div><div class="item-weight">500 мл</div></div>
+                    <div class="item-price">200 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Сок в ассортименте</div><div class="item-weight">200 мл</div></div>
+                    <div class="item-price">150 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Бонаква</div><div class="item-weight">500 мл</div></div>
+                    <div class="item-price">150 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Боржоми</div><div class="item-weight">500 мл</div></div>
+                    <div class="item-price">300 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Квас разливной</div><div class="item-weight">500 мл</div></div>
+                    <div class="item-price">150 р.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-content"><div class="item-name">Молочный коктейль (клубничный, шоколадный, ванильный)</div><div class="item-weight">300 мл</div></div>
+                    <div class="item-price">350 р.</div>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+
+</body>
+</html>
